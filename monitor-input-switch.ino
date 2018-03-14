@@ -29,14 +29,17 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   if (digitalRead(PIN_SPLIT) == HIGH && m_intCurrentPin != PIN_SPLIT) {
+    m_intCurrentPin = PIN_SPLIT;
     doSplit();
     delay(500);
   }
   else if (digitalRead(PIN_HDMI) == HIGH && m_intCurrentPin != PIN_HDMI) {
+    m_intCurrentPin = PIN_HDMI;
     doFullHdmi();
     delay(500);
   }
   else if (digitalRead(PIN_DISPLAY_PORT) == HIGH && m_intCurrentPin != PIN_DISPLAY_PORT) {
+    m_intCurrentPin = PIN_DISPLAY_PORT;
     doFullDisplayPort();
     delay(500);
   }
