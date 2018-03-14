@@ -3,9 +3,9 @@ const int PIN_HDMI = 4;
 const int PIN_DISPLAY_PORT = 8;
 
 /*
- *  split     {kn 1 0x020x20}{xb 1 0xc00x20}{xc 1 0x900x20}
- *  full hdmi {kn 1 0x000x20}{xb 1 0x900x20}
- *  full dp   {kn 1 0x000x20}{xb 1 0xc00x20}
+ *  split     {kn 01 01}{xb 01 C0}{xc 01 92}
+ *  full hdmi {kn 01 00}{xb 01 92}
+ *  full dp   {kn 01 00}{xb 01 C0}
  */
 
 const int COMMAND_LENGTH = 9;
